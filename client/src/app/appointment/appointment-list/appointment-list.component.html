@@ -1,0 +1,22 @@
+<p>
+  appointment-list works!
+</p>
+
+
+<h3>All Appointments</h3>
+<p>Filter by name: <input type="text" name="filter" [(ngModel)]="search_string"></p>
+<table>
+	<tr><th>Date</th>
+		<th>Time</th>
+		<th>Name</th>
+		<th>Complaint</th>
+	</tr>
+	<tr *ngFor="let appointment of this.appointmentService.APPOINTMENTS | searchappts:search_string">
+	<td>{{appointment.date | date:"MMMM d, yyyy h:mm:ss a" }}</td>
+    	<td>{{appointment.date | date: short }}</td>
+    	<td>{{appointment.name}}</td>
+		<td>{{appointment.complaint}}</td>
+
+		<td ><button (click)="delete(appointment._id)">Cancel</button></td>
+	</tr>
+</table>

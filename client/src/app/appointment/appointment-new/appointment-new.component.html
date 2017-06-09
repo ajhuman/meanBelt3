@@ -1,0 +1,27 @@
+
+<header>
+  <h2>New Appointment</h2>
+</header>
+<form (submit)="create()">
+
+  <ul>
+      <li>
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date" [(ngModel)]="new_appointment.date" >
+      </li>
+      <li>
+        <label for="time">Time</label>
+        <input type="time" name="answer" id="time" [(ngModel)]="new_appointment.time" >
+      </li>
+      <li>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" [(ngModel)]="new_appointment.name">
+      </li>
+      <li>
+        <label for="complaint">Complaint:</label>
+        <input type="text" name="complaint" id="complaint" [(ngModel)]="new_appointment.complaint">
+      </li>
+  </ul>
+  <button type="submit">Cancel</button>
+  <button type="submit">Add Appointment</button>
+</form>
