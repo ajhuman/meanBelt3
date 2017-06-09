@@ -1,0 +1,3 @@
+<h1>Login Check</h1>
+<app-user-login *ngIf="!user_name" (login)="set_user_name($event)"></app-user-login>
+<app-user-welcome *ngIf="user_name" [name]="user_name" (logout)="logout()"></app-user-welcome>
